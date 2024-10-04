@@ -1,0 +1,22 @@
+{% extends "home.html" %}
+
+
+{% block content %}
+<h1>This is all teachers data in teachers app level</h1>
+<h1>Teachers Data</h1>
+<div style="display: flex; flex-direction: column; gap: 10px; margin: 10px auto; justify-content: center;align-items: center;">
+
+    {% for teacher in teachers %}
+<div class="card w-50">
+    <div class="card-body">
+      <h5 class="card-title">Username: {{ teacher.username }}</h5>
+      <p class="card-text">Full Name: {{ teacher.full_name }}</p>
+      <p class="card-text">Contact: {{ teacher.contact_no }}</p>
+      <p class="card-text">Created At: {{ teacher.created_at }}</p>
+
+      <a href="#" class="btn btn-primary">View Details</a>
+    </div>
+  </div>
+  
+{% endfor %}
+{% endblock content %}
